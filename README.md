@@ -35,8 +35,8 @@ Aplicativo React Native que permite gerenciar tarefas de forma **offline**, com 
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/Stanley-Maloney/app-offline-sync.git
+cd app-offline-sync
 
 # Instale as dependências
 npm install
