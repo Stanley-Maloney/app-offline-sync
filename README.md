@@ -1,50 +1,87 @@
-# Welcome to your Expo app 👋
+# 📋 Lista de Tarefas Offline com Sincronização
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo React Native que permite gerenciar tarefas de forma **offline**, com **sincronização manual** quando o dispositivo estiver online. Ideal para situações em que o usuário pode ficar sem internet e deseja manter seus dados seguros até que possa sincronizá-los.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Funcionalidades
 
-   ```bash
-   npm install
-   ```
+- ✅ Adicionar novas tarefas
+- 🔄 Marcar tarefas como concluídas
+- 📶 Detectar automaticamente a conexão online/offline
+- 💾 Salvar dados localmente com `AsyncStorage`
+- ☁️ Sincronizar dados pendentes manualmente com um botão
+- ♻️ Restaurar tarefas fixas do "servidor" (mock)
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🧠 Tecnologias Utilizadas
 
-In the output, you'll find options to open the app in a
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [@react-native-async-storage/async-storage](https://github.com/react-native-async-storage/async-storage)
+- [@react-native-community/netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📱 Demonstração
 
-## Get a fresh project
+<!-- Substitua pela imagem real depois -->
+![app-preview](./assets/preview.png)
 
-When you're ready, run:
+---
+
+## 🛠️ Como Rodar Localmente
 
 ```bash
-npm run reset-project
+# Clone o repositório
+git clone https://github.com/Stanley-Maloney/app-offline-sync.git
+cd app-offline-sync
+
+# Instale as dependências
+npm install
+
+# Inicie o projeto com Expo
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+> 💡 Você pode testar diretamente no celular usando o app **Expo Go** e escaneando o QR Code gerado no terminal.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📂 Estrutura do Projeto
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+/
+├── index.tsx              # Tela principal com lógica da lista de tarefas
+├── assets/                # Imagens e ícones
+└── README.md              # Documentação do projeto
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🔄 Como Funciona a Sincronização
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. O usuário adiciona ou edita uma tarefa offline.
+2. A tarefa é salva localmente e marcada como `synced: false`.
+3. Quando a conexão é detectada, um botão **"Sincronizar Agora"** aparece.
+4. Ao clicar, a sincronização é simulada e as tarefas são marcadas como `synced: true`.
+
+---
+
+## 🧪 Restaurar Tarefas do Servidor (Mock)
+
+- Um botão permite restaurar duas tarefas fixas como se fossem recebidas de um servidor remoto.
+- Ideal para testes e reset de estado local.
+
+---
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com melhorias.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
